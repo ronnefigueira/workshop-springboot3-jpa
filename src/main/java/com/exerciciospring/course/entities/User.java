@@ -17,27 +17,30 @@ public class User implements Serializable {
 	
 	@jakarta.persistence.Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+	private Long Id;
 	private String name;
 	private String email;
 	private String phone;
 	private String password;
 	
-	
-	public User(String name, String email, String phone, String password) {
+	public User() {
+		
+	}
+
+	public User(Long id, String name, String email, String phone, String password) {
 		super();
-	    this.name = name;
+		Id = id;
+		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
 	}
 
-		
-	public long getId() {
+	public Long getId() {
 		return Id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		Id = id;
 	}
 
@@ -87,11 +90,11 @@ public class User implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Id == other.Id;
+		return Objects.equals(Id, other.Id);
 	}
+
 	
 	
-	
-	
+		
 
 }
