@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exerciciospring.course.entities.Product;
-import com.exerciciospring.course.entities.User;
 import com.exerciciospring.course.services.ProductService;
 
 @RestController
